@@ -1,3 +1,4 @@
+#
 #h=`date +%H`
 #h=$1
 u=`whoami`
