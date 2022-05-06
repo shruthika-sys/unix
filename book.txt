@@ -1,0 +1,5 @@
+ECE|10
+ESE|25
+MCA|30
+MBA|26
+Computer science|20
