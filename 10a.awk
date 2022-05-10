@@ -1,87 +1,75 @@
-EGIN{
-OFS=" "
-}
+BEGIN{
+printf ("please enter a date \n")
+getline str 
+split(str,a,"-")
 
+
+
+        if((a[2]>0 && a[2]<=12) && (a[1]>0 && a[1]<=31))
+        {
+        
+        if(a[2]==1 )
+       
+      {
+    printf("Jan %d\t %d\t", a[1], a[3])
+    }
+    else if(a[2]==3 )
+    {
+    printf("Mar %d\t %d\t", a[1], a[3])
+    }
+    else if((a[2]==4) && (a[1]>0 && a[1]<=30))
+    {
+    printf("Apr %d\t %d\t", a[1], a[3])
+    }
+    else if(a[2]==5 )
+    {
+    printf("May %d\t %d\t", a[1], a[3])
+    }
+    else if((a[2]==6) && (a[1]>0 && a[1]<=30))
+    {
+    printf("June %d\t %d\t", a[1], a[3])
+    }
+    else if(a[2]==7 )
+    {
+    printf("July %d\t %d\t", a[1], a[3])
+    }
+    else if(a[2]==8 )
+    {
+    printf("Aug %d\t %d\t", a[1], a[3])
+    }
+    
+    
+   else   if(a[2]==10)
 {
-split($0,date,"-")
-
-if(date[2]>=1 && date[2]<=12){
-
-if(date[2]==1 && date[1]>=1 && date[1]<=31){
-print "January",date[1],date[3]
-exit
-}
-
-else if(date[2]==2 && date[1]>=1 && date[1]<=28){
-print "February",date[1],date[3]
-exit
-}
-
-else if(date[2]==2 && date[1]==29){
-res=date[3]=date[3]/4
-if(res==0)
+    printf("Oct %d\t %d\t", a[1], a[3])
+    }
+    else if((a[2]==11) && (a[1]>0 && a[1]<=30))
+    {
+    printf("Nov %d\t %d\t", a[1], a[3])
+    }
+   else   if(a[2]==12)
 {
-print "February",date[1],res
-exit
-}
-printf("Not a leap year")
-}
-
-else if(date[2]==3 && date[1]>=1 && date[1]<=31){
-print "March",date[1],date[3]
-exit
-}
-
-else if(date[2]==4 && date[1]>=1 && date[1]<=30){
-print "April",date[1],date[3]
-exit
-}
-
-else if(date[2]==5 && date[1]>=1 && date[1]<=31){
-print "May",date[1],date[3]
-exit
-}
-
-else if(date[2]==6 && date[1]>=1 && date[1]<=30){
-print "June",date[1],date[3]
-exit
-}
-
-else if(date[2]==7 && date[1]>=1 && date[1]<=31){
-print "July",date[1],date[3]
-exit
-}
-
-else if(date[2]==8 && date[1]>=1 && date[1]<=31){
-print "August",date[1],date[3]
-exit
-}
-
-else if(date[2]==9 && date[1]>=1 && date[1]<=30){
-print "September",date[1],date[3]
-exit
-}
-
-else if(date[2]==10 && date[1]>=1 && date[1]<=31){
-print "October",date[1],date[3]
-exit
-}
-
-else if(date[2]==11 && date[1]>=1 && date[1]<=30){
-print "November",date[1],date[3]
-exit
-}
-
-else if(date[2]==12 && date[1]>=1 && date[1]<=31){
-print "December",date[1],date[3]
-exit
-}
-
+    printf("Dec %d\t %d\t", a[1], a[3])
+    }
+    
+    
+else  if (a[2]==2)
+ {
+if(a[1]>0 && a[1]<=28 && (a[3]%4)!=0)
+printf("Feb %d\t %d\t", a[1], a[3])
+else if(a[1]>0 && a[1]<=29 && (a[3]%4)==0)
+printf("Feb  %d\t %d\t",a[1], a[3])
 else
-print "Invalid date"
-exit
+printf "invalid date \n"
 }
-else
-print "Invalid month"
-exit
+else 
+    {
+    printf "invalid date please enter correct date"
+    }
+    }
+else 
+   printf "invalid! please enter correct month or date \n"
+   printf("\n")
+   
+   
 }
